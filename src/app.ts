@@ -91,8 +91,10 @@ const corsOptions = {
   origin:
     process.env.NODE_ENV === 'production'
       ? [
-          process.env.FRONTEND_URL || 'https://frontend-mvptodolistapp-mq1v95yfa-jmarkevins-projects.vercel.app',
-          'https://frontend-mvptodolistapp-mq1v95yfa-jmarkevins-projects.vercel.app'
+          process.env.FRONTEND_URL ||
+            'https://frontend-mvptodolistapp-dy4vz3oqd-jmarkevins-projects.vercel.app',
+          'https://frontend-mvptodolistapp-dy4vz3oqd-jmarkevins-projects.vercel.app',
+          'https://frontend-mvptodolistapp-mq1v95yfa-jmarkevins-projects.vercel.app', // Keep old URL for compatibility
         ]
       : ['http://localhost:3000', 'http://localhost:5173'],
   credentials: true,
