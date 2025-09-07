@@ -90,7 +90,10 @@ export const app = express();
 const corsOptions = {
   origin:
     process.env.NODE_ENV === 'production'
-      ? [process.env.FRONTEND_URL || 'https://your-frontend-domain.vercel.app']
+      ? [
+          process.env.FRONTEND_URL || 'https://frontend-mvptodolistapp-mq1v95yfa-jmarkevins-projects.vercel.app',
+          'https://frontend-mvptodolistapp-mq1v95yfa-jmarkevins-projects.vercel.app'
+        ]
       : ['http://localhost:3000', 'http://localhost:5173'],
   credentials: true,
   optionsSuccessStatus: 200,
