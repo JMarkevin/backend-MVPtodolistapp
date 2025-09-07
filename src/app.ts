@@ -95,8 +95,13 @@ const corsOptions = {
             'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app',
           'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app', // Current production URL
           'https://todolist-hendy-salim-bwo8po2xx-hendysalim8-8875s-projects.vercel.app',
-          'https://frontend-mvptodolistapp-dy4vz3oqd-jmarkevins-projects.vercel.app', // Previous URL
-          'https://frontend-mvptodolistapp-mq1v95yfa-jmarkevins-projects.vercel.app', // Keep old URL for compatibility
+          'https://frontend-mvptodolistapp.vercel.app',
+          'https://frontend-mvptodolistapp-git-main-jmarkevins-projects.vercel.app',
+          'https://frontend-mvptodolistapp-7legfatyk-jmarkevins-projects.vercel.app',
+          'https://todolistbysari.vercel.app',
+          'https://todolistbysari-jvxgvcdke-saris-projects-ad7de20f.vercel.app',
+          'https://todolist-remotebackend.vercel.app',
+          'https://todolist-remotebackend-fn4fkkry0-senas-projects-56c0899a.vercel.app',
         ]
       : ['http://localhost:3000', 'http://localhost:5173'],
   credentials: true,
