@@ -100,9 +100,9 @@ const corsOptions = {
           'https://frontend-mvptodolistapp-git-main-jmarkevins-projects.vercel.app',
           'https://frontend-mvptodolistapp-7legfatyk-jmarkevins-projects.vercel.app',
           'https://todolistbysari.vercel.app',
-          'https://todolistbysari-jvxgvcdke-saris-projects-ad7de20f.vercel.app',
+          'https://todolistbysari-27bgeatsw-saris-projects-ad7de20f.vercel.app',
           'https://todolist-remotebackend.vercel.app',
-          'https://todolist-remotebackend-fn4fkkry0-senas-projects-56c0899a.vercel.app',
+          'https://todolist-remotebackend-2i9almib9-senas-projects-56c0899a.vercel.app',
         ]
       : ['http://localhost:3000', 'http://localhost:5173'],
   credentials: true,
