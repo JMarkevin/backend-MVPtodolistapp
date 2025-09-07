@@ -94,6 +94,7 @@ const corsOptions = {
           process.env.FRONTEND_URL ||
             'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app',
           'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app', // Current production URL
+          'https://todolist-hendy-salim-bwo8po2xx-hendysalim8-8875s-projects.vercel.app/',
           'https://frontend-mvptodolistapp-dy4vz3oqd-jmarkevins-projects.vercel.app', // Previous URL
           'https://frontend-mvptodolistapp-mq1v95yfa-jmarkevins-projects.vercel.app', // Keep old URL for compatibility
         ]

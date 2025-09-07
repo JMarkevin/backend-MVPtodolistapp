@@ -1,7 +1,7 @@
-import express from "express";
-import { handleZodErrorResponse } from "../../utils/error";
-import { TodoSchema, Todo } from "../../types/todos";
-import { getTodo, getTodos, setTodos } from "../../mockup/todos";
+import express from 'express';
+import { handleZodErrorResponse } from '../../utils/error';
+import { TodoSchema, Todo } from '../../types/todos';
+import { getTodo, getTodos, setTodos } from '../../mockup/todos';
 
 const router = express.Router();
 
@@ -41,7 +41,7 @@ const UpdateTodoSchema = TodoSchema.partial().extend({
   id: TodoSchema.shape.id,
 });
 
-router.put("/:id", async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const body = {
       ...req.body,
@@ -52,7 +52,7 @@ router.put("/:id", async (req, res) => {
     const updatedTodo = UpdateTodoSchema.parse(body);
 
     const existing = getTodos().find((t) => t.id === updatedTodo.id);
-    if (!existing) return res.status(404).json({ error: "Todo not found" });
+    if (!existing) return res.status(404).json({ error: 'Todo not found' });
 
     // merged dengan type aman
     const merged: Todo = {
@@ -65,7 +65,7 @@ router.put("/:id", async (req, res) => {
     setTodos(merged.id, merged);
     res.status(200).json(getTodo(merged.id));
   } catch (error) {
-    console.error("Error updating todo:", error);
+    console.error('Error updating todo:', error);
     handleZodErrorResponse(res, error);
   }
 });
