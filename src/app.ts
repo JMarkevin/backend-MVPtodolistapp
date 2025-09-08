@@ -86,28 +86,35 @@ export const app = express();
 // Original CORS (disabled for production)
 // app.use(cors());
 
-// CORS configuration for production
+// CORS configuration for production - Allow all origins
 const corsOptions = {
-  origin:
-    process.env.NODE_ENV === 'production'
-      ? [
-          process.env.FRONTEND_URL ||
-            'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app',
-          'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app', // Current production URL
-          'https://todolist-hendy-salim.vercel.app',
-          'https://todolist-hendy-salim-bwo8po2xx-hendysalim8-8875s-projects.vercel.app',
-          'https://frontend-mvptodolistapp.vercel.app',
-          'https://frontend-mvptodolistapp-git-main-jmarkevins-projects.vercel.app',
-          'https://frontend-mvptodolistapp-7legfatyk-jmarkevins-projects.vercel.app',
-          'https://todolistbysari.vercel.app',
-          'https://todolistbysari-27bgeatsw-saris-projects-ad7de20f.vercel.app',
-          'https://todolist-remotebackend.vercel.app',
-          'https://todolist-remotebackend-2i9almib9-senas-projects-56c0899a.vercel.app',
-        ]
-      : ['http://localhost:3000', 'http://localhost:5173'],
+  origin: true, // Allow all origins in production
   credentials: true,
   optionsSuccessStatus: 200,
 };
+
+// Original CORS with specific URLs (commented out for reference)
+// const corsOptions = {
+//   origin:
+//     process.env.NODE_ENV === 'production'
+//       ? [
+//           process.env.FRONTEND_URL ||
+//             'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app',
+//           'https://frontend-mvptodolistapp-lkde70prr-jmarkevins-projects.vercel.app',
+//           'https://todolist-hendy-salim.vercel.app',
+//           'https://todolist-hendy-salim-bwo8po2xx-hendysalim8-8875s-projects.vercel.app',
+//           'https://frontend-mvptodolistapp.vercel.app',
+//           'https://frontend-mvptodolistapp-git-main-jmarkevins-projects.vercel.app',
+//           'https://frontend-mvptodolistapp-7legfatyk-jmarkevins-projects.vercel.app',
+//           'https://todolistbysari.vercel.app',
+//           'https://todolistbysari-27bgeatsw-saris-projects-ad7de20f.vercel.app',
+//           'https://todolist-remotebackend.vercel.app',
+//           'https://todolist-remotebackend-2i9almib9-senas-projects-56c0899a.vercel.app',
+//         ]
+//       : ['http://localhost:3000', 'http://localhost:5173'],
+//   credentials: true,
+//   optionsSuccessStatus: 200,
+// };
 
 app.use(cors(corsOptions));
 app.use(express.json());
